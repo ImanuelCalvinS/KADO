@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body {
+    color: azure; /* Warna teks tetap terlihat di atas latar belakang */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffb6c1; /* Pink muda */
+    /* background-image: 
+        url('../img/sticker1.jpg'), 
+        url('../img/sticker2.jpg'), 
+        url('../img/sticker3.jpg'), 
+        url('../img/sticker4.jpg'); */ /* Komentari atau hapus baris ini */
+    background-repeat: no-repeat;
+    background-position: top left, center, bottom right, top right;
+    background-size: 100px, 150px, 120px, 100px;
+}
+.greetings {
+    font-size: 4rem; /* Ukuran font lebih besar */
+    font-weight: bold;
+    margin-top: 50px; /* Menurunkan posisi teks ke bawah */
+    text-align: center; /* Memastikan teks tetap di tengah secara horizontal */
+    line-height: 1.2; /* Menyesuaikan jarak antar baris jika ada */
+    z-index: 1; /* Memastikan teks berada di atas latar belakang */
+    position: relative; /* Memastikan teks tidak terpengaruh oleh gambar */
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #ffb6c1, 0 0 50px #ffb6c1, 0 0 100px #ffb6c1; /* Pink muda */
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+
+.description {
+    font-size: 1.5rem; /* Ukuran font deskripsi */
+    text-align: center; /* Teks tetap di tengah secara horizontal */
+    margin-top: 20px; /* Jarak dari teks sebelumnya */
+    z-index: 1; /* Memastikan deskripsi berada di atas latar belakang */
+    position: relative; /* Memastikan deskripsi tidak terpengaruh oleh gambar */
+}
+
+.button {
+    margin-top: 30px; /* Memberikan jarak antara tombol dan deskripsi */
+    z-index: 1; /* Memastikan tombol berada di atas latar belakang */
+    position: relative; /* Memastikan tombol tidak terpengaruh oleh gambar */
+}
+
+button {
+    background-color: #000; /* Warna latar tombol hitam */
+    color: #fff; /* Warna teks tombol putih */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Membuat tombol membulat */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #333; /* Warna tombol saat hover */
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+button a {
+    text-decoration: none;
+    color: #fff; /* Warna teks tombol tetap putih */
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff; /* Warna tulisan putih */
+    background-color: #000; /* Warna latar tombol hitam */
+    padding: 10px 20px;
+    border-radius: 25px; /* Membuat sudut membulat */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: all 0.3s ease-in-out; /* Animasi transisi */
+}
+
+.button button {
+    all: unset; /* Menghapus semua gaya default tombol */
+    display: inline-block; /* Agar tombol tetap mengikuti gaya link */
+}
+
+.button a:hover {
+    background-color: #333; /* Warna latar tombol saat hover lebih terang */
+    transform: scale(1.1); /* Efek zoom saat hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar */
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    
+    .button a{
+        font-size: .5rem;
+    }
+}
+
+.about-sea {
+    background-image: none; /* Tidak ada gambar stiker */
+    background-color: #ffb6c1; /* Tetap menggunakan warna pink muda */
+}

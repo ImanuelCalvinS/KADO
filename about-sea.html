@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>seaa??</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffb6c1; /* Pink muda */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            overflow: auto; /* Izinkan scroll jika teks terlalu panjang */
+        }
+
+        .greetings {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .description-container {
+            width: 100%; /* Pastikan lebar penuh */
+            text-align: center; /* Teks di dalamnya rata tengah */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Pastikan elemen di dalamnya berada di tengah */
+        }
+
+        .description {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            opacity: 0; /* Awalnya tidak terlihat */
+            animation: fadeIn 0.5s ease-in-out forwards; /* Animasi muncul */
+            display: none; /* Awalnya disembunyikan */
+            text-align: center; /* Teks di dalam elemen ini rata tengah */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Geser sedikit ke bawah */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Kembali ke posisi semula */
+            }
+        }
+
+        .button {
+            margin: 20px 0;
+        }
+
+        .button button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button button:hover {
+            background-color: #333;
+            transform: scale(1.1);
+        }
+
+        .button a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+    <script>
+        let currentIndex = 0;
+
+        function showNextMessage() {
+            const messages = document.querySelectorAll('.description');
+            const totalMessages = messages.length;
+
+            // Tampilkan pesan berikutnya
+            if (currentIndex < totalMessages) {
+                messages[currentIndex].style.display = 'block'; // Tampilkan elemen
+                messages[currentIndex].style.animation = 'fadeIn 0.5s ease-in-out forwards'; // Tambahkan animasi
+                currentIndex++;
+            }
+
+            // Jika semua pesan sudah ditampilkan, tampilkan tombol terakhir
+            if (currentIndex === totalMessages) {
+                const nextButton = document.getElementById('next-button');
+                nextButton.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body class="about-sea">
+    <div class="greetings">
+        <span>seaa</span>
+        <span>yang</span>
+        <span>aku</span>
+        <span>tau</span>
+        <span>sampe</span>
+        <span>saat</span>
+        <span>iniii</span>
+    </div>
+
+    <!-- Container untuk deskripsi -->
+    <div class="description-container">
+        <div class="description"><span>seaa lebi muda 2 tahun dariku</span></div>
+        <div class="description"><span>suara sea lucuuu padahal udah gede ❤️</span></div>
+        <div class="description"><span>sea ga suka kopi katanya pahit, padahal aku suka banget kopii ❤️</span></div>
+        <div class="description"><span>sea suka banget jajan, padahal aku jarang banget jajannn ❤️</span></div>
+        <div class="description"><span>katanya kalo calvin ketemu sea, sea bakalan lebih alay hahaha ❤️</span></div>
+        <div class="description"><span>agak kaget, awal awal banget katanya "mau calvin banyak banyak", dalem hatiku (busettt ni anak) ❤️</span></div>
+        <div class="description"><span>katanya dia excited banget samaku pas awal awal, kan kagett, mana dia bilang suka stiker papa beruang kumis kulit merah itu hahaha lucuu ❤️</span></div>
+        <div class="description"><span>abistu langsung bikin nama panggilan buatkuu KALKALA katanya hahahah lucu kann ❤️</span></div>
+        <div class="description"><span>dia punya rahasia (cowo cowo lain dicuekin kalo samaku excited parah katanya wkwkwk) itu bukann rahasiaaa (dalem hatiku hhahah) ❤️</span></div>
+        <div class="description"><span>anehhh bangett gasuka nasii dia, tiapp harii aku makan nasi anjayyy, tapi aku pengen sih kamu juga suka nasi ❤️</span></div>
+        <div class="description"><span>kubongkar yaa rahasianya, jamet parah diaa suka JJ RIMEX hahaha ❤️</span></div>
+        <div class="description"><span>sea gasuka cilok aci dan teman temannya yg di aci in ❤️</span></div>
+        <div class="description"><span>sea gasuka teh, tapi suka susu ❤️</span></div>
+        <div class="description"><span>sea gasuka pantai, tapi suka gunung ❤️</span></div>
+        <div class="description"><span>sea gasuka panas, tapi suka dinginn ❤️</span></div>
+        <div class="description"><span>sea gasuka matematika, tapi suka belajar bahasa ❤️</span></div>
+        <div class="description"><span>sea suka basket, badminton, suka musikk hahaha ko bisa samaan hehe, mana pede suka bikin lagu anjayyy ❤️</span></div>
+        <div class="description"><span>tapiiiiii gabisa kunci gitar B awokawokawok:v ❤️</span></div>
+        <div class="description"><span>apalagi.... sea suka telur gulung wkwk ❤️</span></div>
+        <div class="description"><span>sea suka basoo yg original, gasuka kalo dikecapin ❤️</span></div>
+        <div class="description"><span>sea gasuka bawang, apalagi bawang goreng, apalagi dicampur ke makanan ❤️</span></div>
+        <div class="description"><span>sea suka nasi goreng kalo buatan mamanya, tapi kalo buatan orang dia gasuka ❤️</span></div>
+        <div class="description"><span>sea gasuka ikannnn, padahal proteinnya tinggi ❤️</span></div>
+        <div class="description"><span>ayam goreng gasuka, tapi suka ayam bakar dan SATE kannn sama sama ayamm yakkk, anehh tapi lucuu ❤️</span></div>
+        <div class="description"><span>sea suka sop sapii, suka babi kalo lagi mood...kasian babinya udah sering dihujat dipotong di moodin ama cewe, kasian wkwkw ❤️</span></div>
+        <div class="description"><span>sea jarang suka mie, KECUALI MIE SEDAP SOTO anjayy, akuuu pemakan segala miee...sangat2 beda jauh perbedaan kita ❤️</span></div>
+        <div class="description"><span>sea suka kucing dan anjing ❤️</span></div>
+        <div class="description"><span>sea gasuka madu, tapi sangat suka susu putih ❤️</span></div>
+        <div class="description"><span>sea suka pilih pilih kalo makan coklat ❤️</span></div>
+        <div class="description"><span>sea suka martabak kalo makannya berdua atau lebih, kalo makan sendiri gamau dia ❤️</span></div>
+        <div class="description"><span>sea suka PANCONG, apa ituu??, sea suka kejuu apalagi JASUKE ❤️</span></div>
+        <div class="description"><span>sea suka capcay tanpa bawang/bawang goreng ❤️</span></div>
+        <div class="description"><span>sea jarang suka buah ❤️</span></div>
+        <div class="description"><span>sea suka sayur tapi ga semua sayur, cuma brokoli, pak coy, sayur hijau upin ipin dan wortel kalo direbus ❤️</span></div>
+        <div class="description"><span>sea gasuka bihun, sea suka kwetiau ❤️</span></div>
+        <div class="description"><span>sea gasuka nasi kuning kayak rasa kunyit katanya ❤️</span></div>
+        <div class="description"><span>sea suka memancing, karena punya moment dan memori ❤️</span></div>
+        <div class="description"><span>sea sering ke gereja KA juga, ke ganjuran, bahkan saat teduh ❤️</span></div>
+        <div class="description"><span>sea suka baca chat berdua pas awal awal, katanya itu moment penting wkwkwk harus diunduh  ❤️</span></div>
+        <div class="description"><span>terakhirr wkwk ❤️</span></div>
+        <div class="description"><span>sea suka naik gunung, ini hobiku juga aku kasi di akhir hobinya mahal soalnya ❤️</span></div>
+        <div class="description"><span>udah, baru berapa hari sebanyak itu sharingnya kan wkkwwkw ❤️</span></div>
+        <div class="description"><span>ternyata secerewet itu yaaa hahaha, beda banget sama aku yg pendiam ini ❤️</span></div>
+        <div class="description"><span>lucuuu ❤️</span></div>
+        <div class="description"><span>abistu pertama kali kita jalann, udah nyiapin duit nihh ❤️</span></div>
+        <div class="description"><span>ehhhh, maunya nongkrong di jl sudirmann, speechless akuu wkwwkkw ❤️</span></div>
+        <div class="description"><span>lucuuu kannn ❤️</span></div>
+        <div class="description"><span>kannnnn ❤️</span></div>
+        <div class="description"><span>kannnnnnnn ❤️</span></div>
+        <div class="description"><span>gitu aja aku langsung kayak, iih lucu banget cewe iniiii dlem hatiku kan wkwk❤️</span></div>
+        <div class="description"><span>dari awal kenal sampe sekarang ternyata ga dibuat buat lucunya ya ❤️</span></div>
+        <div class="description"><span>aku sukaaa ❤️</span></div>
+        <div class="description"><span>calvin mau ngomong ini ❤️</span></div>
+        <div class="description"><span>ini kata kata sekali untuk sea ❤️</span></div>
+        <div class="description"><span>sea mau kan bareng sama aku? ❤️</span></div>
+        <div class="description"><span>kalo ga sama aku, berartiii kita liat besok wkwkwk ❤️</span></div>
+        <div class="description"><span>dahhh ❤️</span></div>
+        <div class="description"><span>aku gatau mau ngomong apa lagi ❤️</span></div>
+        <div class="description"><span>nnti gongnya ngomong langsung wkkwkw</span></div>
+        <div class="description"><span>dahhh, pencet tombol yang bawah sendiri tuu</span></div>
+    </div>
+
+    <!-- Tombol untuk menampilkan deskripsi -->
+    <div class="button">
+        <button onclick="showNextMessage()">&#8595;</button> <!-- Simbol panah ke bawah -->
+    </div>
+
+    <!-- Tombol terakhir untuk ke halaman love -->
+    <div class="button" id="next-button" style="display: none;">
+        <button>
+            <a href="love.html">lanjut boss</a>
+        </button>
+    </div>
+</body>
+</html>
